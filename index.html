@@ -1,11 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__text">
+          <h2>Here’s $10 Off Your First Order!</h2>
+          <p>
+            Join our newsletter and get a $10 discount code sent straight to
+            your inbox. New customers only.
+          </p>
+          <form class="popup__form">
+            <label for="popup-email"
+              >Email
+              <input
+                type="email"
+                id="popup-email"
+                placeholder="Enter your email"
+                required
+              />
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="popup__image">
+          <img src="./assets/popup/nike-just-do-it 1.jpg" alt="Nike shoes" />
+          <button class="popup__close" data-popup-close>&times;</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__container">
+        <!---LOGO-->
+        <a href="#" class="header__logo" aria-label="Homepage">
+          <img src="./assets/icons/logo.svg" alt="Stellar Soft Logo" />
+        </a>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li>
+              <a href="#">New & Featured</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">Kids</a>
+            </li>
+          </ul>
+        </nav>
+        <!---Cart icon-->
+        <a href="#cart" class="header__cart" aria-label="Shopping cart">
+          <img src="./assets/icons/Cart Icon.svg" alt="Shopping cart" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/slide-bar/Slide - 1.jpg" alt="Banner 1" />
+
+              <div class="hero-content">
+                <h1>More than just shoes — it’s a part of your story.</h1>
+                <p>
+                  Original sneakers from Nike and other top brands that make
+                  every step feel special.
+                </p>
+                <button type="button">Shop the Collection</button>
+              </div>
+            </div>
+            <!--Second Slide -->
+            <div class="swiper-slide">
+              <img src="./assets/slide-bar/Slide - 2.jpg" alt="Banner 2" />
+
+              <div class="hero-content">
+                <h1>More than just shoes — it’s a part of your story.</h1>
+                <p>
+                  Original sneakers from Nike and other top brands that make
+                  every step feel special.
+                </p>
+                <button type="button">Shop the Collection</button>
+              </div>
+            </div>
+            <!--Third Slide-->
+            <div class="swiper-slide">
+              <img src="./assets/slide-bar/Slide - 3.jpg" alt="Banner 3" />
+
+              <div class="hero-content">
+                <h1>More than just shoes — it’s a part of your story.</h1>
+                <p>
+                  Original sneakers from Nike and other top brands that make
+                  every step feel special.
+                </p>
+                <button type="button">Shop the Collection</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>Featured Collection</h2>
+          <ul>
+            <li>
+              <div>
+                <svg>
+                  <use href="./assets/icons/image (1).svg"></use>
+                </svg>
+              </div>
+
+              <h3>Nike Streakfly 2</h3>
+              <p>$300.00</p>
+            </li>
+            <li>
+              <div>
+                <svg>
+                  <use href="./assets/icons/image (2).svg"></use>
+                </svg>
+              </div>
+
+              <h3>Nike Pegasus Premium</h3>
+              <p>$350.00</p>
+            </li>
+            <li>
+              <div>
+                <svg>
+                  <use href="./assets/icons/image (3).svg"></use>
+                </svg>
+              </div>
+
+              <h3>Nike Pegasus 41</h3>
+              <p>$280.00</p>
+            </li>
+            <li>
+              <div>
+                <svg>
+                  <use href="./assets/icons/image.svg"></use>
+                </svg>
+              </div>
+
+              <h3>Nike Revolution 7</h3>
+              <p>$440.00</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Frequently asked questions</h2>
+        <p>
+          Answers to our most frequently asked questions are just one click
+          away.
+        </p>
+
+        <div data-spollers data-one-spoller>
+          <div>
+            <button tabindex="-1" type="button" data-spoller>
+              What are Nike's delivery options?
+              <span></span>
+            </button>
+            <div>
+              <div>
+                <p>
+                  When you shop Nike online, either in the Nike App or on
+                  Nike.com, you can return items that are unworn and unwashed
+                  and still have their product tags attached within 30 days of
+                  purchase (some exceptions apply). That includes custom Nike By
+                  You sneakers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button tabindex="-1" type="button" data-spoller>
+              What is Nike's returns policy?
+              <span></span>
+            </button>
+            <div>
+              <div>
+                <p>
+                  When you shop Nike online, either in the Nike App or on
+                  Nike.com, you can return items that are unworn and unwashed
+                  and still have their product tags attached within 30 days of
+                  purchase (some exceptions apply). That includes custom Nike By
+                  You sneakers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button type="button" data-spoller>
+              Where is my Nike order?
+              <span></span>
+            </button>
+            <div>
+              <div>
+                <p>
+                  When you shop Nike online, either in the Nike App or on
+                  Nike.com, you can return items that are unworn and unwashed
+                  and still have their product tags attached within 30 days of
+                  purchase (some exceptions apply). That includes custom Nike By
+                  You sneakers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button type="button" data-spoller>
+              How do I find the right size and fit?
+              <span></span>
+            </button>
+            <div>
+              <div>
+                <p>
+                  When you shop Nike online, either in the Nike App or on
+                  Nike.com, you can return items that are unworn and unwashed
+                  and still have their product tags attached within 30 days of
+                  purchase (some exceptions apply). That includes custom Nike By
+                  You sneakers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <img src="./assets/img/white 1.jpg" alt="white nike shoes" />
+        <h2>Nike Air Max Plus</h2>
+        <p>$280.00</p>
+
+        <ul>
+          <p>Select Size:</p>
+          <li>UK 5.5</li>
+          <li>UK 6 (EU 39)</li>
+          <li>UK 6 (EU 40)</li>
+          <li>UK 6.5</li>
+          <li>UK 7</li>
+          <li>UK 7.5</li>
+        </ul>
+        <button type="button">Add To Bag</button>
+        <p>
+          Let your attitude have the edge in your Nike Air Max Plus, a Tuned Air
+          experience that offers premium stability and unbelievable cushioning.
+        </p>
+      </section>
+      <section>
+        <h4>Need help?</h4>
+        <div>
+          <label for="user-name">Name</label>
+          <input type="text" id="user-name" placeholder="Enter name" />
+        </div>
+        <div>
+          <label for="user-number">Number</label>
+          <input type="text" id="user-number" placeholder="Enter Number" />
+        </div>
+        <div>
+          <label for="user-email">Email</label>
+          <input type="text" id="user-email" placeholder="Enter Email" />
+        </div>
+        <div>
+          <p>Message</p>
+          <input type="textarea" placeholder="Enter Message" />
+        </div>
+        <button type="submit">Submit</button>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <p>Resources</p>
+        <li>Find a Store</li>
+        <li>Nike Journal</li>
+        <li>Become a Member</li>
+        <li>Feedback</li>
+        <li>Promo Codes</li>
+      </ul>
+      <ul>
+        <p>Help</p>
+        <li>Get Help</li>
+        <li>Order Status</li>
+        <li>Shipping and Delivery</li>
+        <li>Returns</li>
+        <li>Payment Options</li>
+      </ul>
+      <ul>
+        <p>Company</p>
+        <li>About Nike</li>
+        <li>News</li>
+        <li>Careers</li>
+        <li>Investors</li>
+        <li>Sustainability</li>
+      </ul>
+      <ul>
+        <p>Menu</p>
+        <li>New & Featured</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+      </ul>
+
+      <div>
+        <p class="copyright">&copy;  2025 Nike, Inc. All rights reserved</p>
+
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy & Cookie Policy</a>
+        <a href="#">Privacy & Cookie Setting</a>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
 </html>

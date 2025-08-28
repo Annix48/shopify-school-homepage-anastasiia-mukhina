@@ -1,0 +1,88 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 227px;
+      left: 60px;
+
+      width: 648px;
+      height: 296px;
+
+      text-align: left;
+      color: $color-white;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10;
+
+      h1 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        margin: 0 0 16px 0;
+
+        @media (max-width: 768px) {
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0 0 24px 0;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: $color-white;
+        color: $color-black;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.2s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+//Pagination fix...
+
+//quality and speed of image loading

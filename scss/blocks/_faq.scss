@@ -1,0 +1,84 @@
+.faq-spoiler {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: $font-family;
+
+  h2 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-gray;
+    margin-bottom: 40px;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .spoiler-block__item {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 16px auto;
+    border-bottom: 1px solid $color-stroke;
+
+    .spoiler-block__title {
+      width: 100%;
+      text-align: left;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $color-black;
+
+      span {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url('./assets/icons/plus.svg') no-repeat center center;
+        background-size: contain;
+        transition: transform 0.3s;
+      }
+
+      &.active span {
+        transform: rotate(45deg);
+      }
+    }
+
+    .spoiler-block__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+      .spoiler-block__info {
+        padding: 16px 0;
+
+        .spoiler-block__text {
+          font-size: 16px;
+          line-height: 24px;
+          color: $color-gray;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

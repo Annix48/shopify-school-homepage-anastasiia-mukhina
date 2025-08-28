@@ -1,8 +1,9 @@
 .hero-section {
   position: relative;
   width: 100%;
+  height: 750px; 
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: $font-family;
 
   .swiper-wrapper {
     display: flex;
@@ -11,10 +12,12 @@
   .swiper-slide {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 750px;
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover; 
       display: block;
     }
 
@@ -22,14 +25,10 @@
       position: absolute;
       top: 227px;
       left: 60px;
-
       width: 648px;
       height: 296px;
-
       text-align: left;
       color: $color-white;
-      flex-direction: column;
-      justify-content: space-between;
       z-index: 10;
 
       h1 {
@@ -38,7 +37,7 @@
         line-height: 48px;
         margin: 0 0 16px 0;
 
-        @media (max-width: 768px) {
+        @media (max-width: $bp-mobile) {
           font-size: 30px;
           line-height: 36px;
         }
@@ -50,7 +49,7 @@
         line-height: 24px;
         margin: 0 0 24px 0;
 
-        @media (max-width: 768px) {
+        @media (max-width: $bp-mobile) {
           font-size: 14px;
           line-height: 20px;
         }
@@ -63,8 +62,8 @@
         background-color: $color-white;
         color: $color-black;
         border: none;
-        cursor: pointer;
         border-radius: 8px;
+        cursor: pointer;
         transition: 0.2s;
 
         &:hover {
@@ -79,10 +78,31 @@
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
+     z-index: 20;
+     display: flex;
+     justify-content: center;
+     width: auto;
+  }
+
+  @media (max-width: $bp-mobile) {
+    height: 400px;
+    .hero-content {
+      top: 50px;
+      left: 20px;
+      width: calc(100% - 40px);
+      height: auto;
+    }
   }
 }
 
+.swiper-pagination-bullet {
+  width: 20x;
+  height: 6px;
+  background-color: $color-gray; 
+  opacity: 1;
+ border-radius: 999px;
+}
 
-//Pagination fix...
-
-//quality and speed of image loading
+.swiper-pagination-bullet-active {
+  background-color: $color-white; 
+}

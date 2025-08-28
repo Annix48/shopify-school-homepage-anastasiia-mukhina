@@ -122,88 +122,102 @@
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2>Featured Collection</h2>
-          <ul>
-            <li>
-              <div>
-                <svg>
-                  <use href="./assets/icons/image (1).svg"></use>
-                </svg>
+      <section class="featured-collection">
+        <h2>Featured Collection</h2>
+        <div class="swiper featured-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="./assets/icons/image (1).svg"
+                  alt="Nike Streakfly 2"
+                />
+                <h3>Nike Streakfly 2</h3>
+                <p>$300.00</p>
               </div>
-
-              <h3>Nike Streakfly 2</h3>
-              <p>$300.00</p>
-            </li>
-            <li>
-              <div>
-                <svg>
-                  <use href="./assets/icons/image (2).svg"></use>
-                </svg>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img
+                  src="./assets/icons/image (2).svg"
+                  alt="Nike Pegasus Premium"
+                />
+                <h3>Nike Pegasus Premium</h3>
+                <p>$350.00</p>
               </div>
-
-              <h3>Nike Pegasus Premium</h3>
-              <p>$350.00</p>
-            </li>
-            <li>
-              <div>
-                <svg>
-                  <use href="./assets/icons/image (3).svg"></use>
-                </svg>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img src="./assets/icons/image (3).svg" alt="Nike Pegasus 41" />
+                <h3>Nike Pegasus 41</h3>
+                <p>$280.00</p>
               </div>
-
-              <h3>Nike Pegasus 41</h3>
-              <p>$280.00</p>
-            </li>
-            <li>
-              <div>
-                <svg>
-                  <use href="./assets/icons/image.svg"></use>
-                </svg>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="product-card">
+                <img src="./assets/icons/image.svg" alt="Nike Revolution 7" />
+                <h3>Nike Revolution 7</h3>
+                <p>$440.00</p>
               </div>
+            </div>
+          </div>
 
-              <h3>Nike Revolution 7</h3>
-              <p>$440.00</p>
-            </li>
-          </ul>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </section>
 
-      <section>
-        <h2>Frequently asked questions</h2>
-        <p>
-          Answers to our most frequently asked questions are just one click
-          away.
-        </p>
-
-        <div data-spollers data-one-spoller>
-          <div>
-            <button tabindex="-1" type="button" data-spoller>
+      <!----FAQ----->
+      <section class="faq-spoiler">
+        <div
+          data-spollers
+          data-one-spoller
+          class="spoiler-block spoiler-block_1"
+        >
+          <h2>Frequently asked questions</h2>
+          <p>
+            Answers to our most frequently asked questions are just one click
+            away.
+          </p>
+          <div class="spoiler-block__item">
+            <button
+              tabindex="-1"
+              type="button"
+              data-spoller
+              class="spoiler-block__title"
+            >
               What are Nike's delivery options?
               <span></span>
             </button>
-            <div>
-              <div>
-                <p>
-                  When you shop Nike online, either in the Nike App or on
-                  Nike.com, you can return items that are unworn and unwashed
-                  and still have their product tags attached within 30 days of
-                  purchase (some exceptions apply). That includes custom Nike By
-                  You sneakers.
+            <div class="spoiler-block__content">
+              <div class="spoiler-block__info">
+                <p class="spoiler-block__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequatur culpa deserunt doloremque ex exercitationem iure,
+                  laboriosam totam. A consectetur, officia!
                 </p>
               </div>
             </div>
           </div>
 
-          <div>
-            <button tabindex="-1" type="button" data-spoller>
+          <div class="spoiler-block__item">
+            <button
+              tabindex="-1"
+              type="button"
+              data-spoller
+              class="spoiler-block__title"
+            >
               What is Nike's returns policy?
               <span></span>
             </button>
-            <div>
-              <div>
-                <p>
+            <div class="spoiler-block__content">
+              <div class="spoiler-block__info">
+                <p class="spoiler-block__text">
                   When you shop Nike online, either in the Nike App or on
                   Nike.com, you can return items that are unworn and unwashed
                   and still have their product tags attached within 30 days of
@@ -214,44 +228,49 @@
             </div>
           </div>
 
-          <div>
-            <button type="button" data-spoller>
+          <div class="spoiler-block__item">
+            <button
+              tabindex="-1"
+              type="button"
+              data-spoller
+              class="spoiler-block__title"
+            >
               Where is my Nike order?
               <span></span>
             </button>
-            <div>
-              <div>
-                <p>
-                  When you shop Nike online, either in the Nike App or on
-                  Nike.com, you can return items that are unworn and unwashed
-                  and still have their product tags attached within 30 days of
-                  purchase (some exceptions apply). That includes custom Nike By
-                  You sneakers.
+            <div class="spoiler-block__content">
+              <div class="spoiler-block__info">
+                <p class="spoiler-block__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequatur culpa deserunt doloremque ex exercitationem iure,
+                  laboriosam totam. A consectetur, officia!
                 </p>
               </div>
             </div>
           </div>
 
-          <div>
-            <button type="button" data-spoller>
+          <div class="spoiler-block__item">
+            <button
+              tabindex="-1"
+              type="button"
+              data-spoller
+              class="spoiler-block__title"
+            >
               How do I find the right size and fit?
               <span></span>
             </button>
-            <div>
-              <div>
-                <p>
-                  When you shop Nike online, either in the Nike App or on
-                  Nike.com, you can return items that are unworn and unwashed
-                  and still have their product tags attached within 30 days of
-                  purchase (some exceptions apply). That includes custom Nike By
-                  You sneakers.
+            <div class="spoiler-block__content">
+              <div class="spoiler-block__info">
+                <p class="spoiler-block__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Consequatur culpa deserunt doloremque ex exercitationem iure,
+                  laboriosam totam. A consectetur, officia!
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section>
         <img src="./assets/img/white 1.jpg" alt="white nike shoes" />
         <h2>Nike Air Max Plus</h2>
@@ -337,4 +356,5 @@
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/swiper.js"></script>
 </html>

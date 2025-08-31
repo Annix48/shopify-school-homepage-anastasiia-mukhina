@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -271,88 +271,87 @@
           </div>
         </div>
       </section>
-      <section>
-        <img src="./assets/img/white 1.jpg" alt="white nike shoes" />
-        <h2>Nike Air Max Plus</h2>
-        <p>$280.00</p>
 
-        <ul>
-          <p>Select Size:</p>
-          <li>UK 5.5</li>
-          <li>UK 6 (EU 39)</li>
-          <li>UK 6 (EU 40)</li>
-          <li>UK 6.5</li>
-          <li>UK 7</li>
-          <li>UK 7.5</li>
-        </ul>
-        <button type="button">Add To Bag</button>
-        <p>
-          Let your attitude have the edge in your Nike Air Max Plus, a Tuned Air
-          experience that offers premium stability and unbelievable cushioning.
-        </p>
-      </section>
-      <section>
-        <h4>Need help?</h4>
-        <div>
-          <label for="user-name">Name</label>
-          <input type="text" id="user-name" placeholder="Enter name" />
-        </div>
-        <div>
-          <label for="user-number">Number</label>
-          <input type="text" id="user-number" placeholder="Enter Number" />
-        </div>
-        <div>
-          <label for="user-email">Email</label>
-          <input type="text" id="user-email" placeholder="Enter Email" />
-        </div>
-        <div>
-          <p>Message</p>
-          <input type="textarea" placeholder="Enter Message" />
-        </div>
-        <button type="submit">Submit</button>
-      </section>
-    </main>
-    <footer>
-      <ul>
-        <p>Resources</p>
-        <li>Find a Store</li>
-        <li>Nike Journal</li>
-        <li>Become a Member</li>
-        <li>Feedback</li>
-        <li>Promo Codes</li>
-      </ul>
-      <ul>
-        <p>Help</p>
-        <li>Get Help</li>
-        <li>Order Status</li>
-        <li>Shipping and Delivery</li>
-        <li>Returns</li>
-        <li>Payment Options</li>
-      </ul>
-      <ul>
-        <p>Company</p>
-        <li>About Nike</li>
-        <li>News</li>
-        <li>Careers</li>
-        <li>Investors</li>
-        <li>Sustainability</li>
-      </ul>
-      <ul>
-        <p>Menu</p>
-        <li>New & Featured</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>Kids</li>
-      </ul>
+      <!----Product Section -->
+     <section class="product" aria-labelledby="product-title"> <div class="product__gallery"> <div class="product__thumbnails"> <img src="./assets/img/color 11.jpg" alt="Nike Air Max Plus purple - view 1" class="product__thumb is-active" /> <img src="./assets/img/color 12.jpg" alt="Nike Air Max Plus purple - view 2" class="product__thumb" /> <img src="./assets/img/color 13.jpg" alt="Nike Air Max Plus purple - view 3" class="product__thumb" /> <img src="./assets/img/color 14.jpg" alt="Nike Air Max Plus purple - view 4" class="product__thumb" /> <img src="./assets/img/color 15.jpg" alt="Nike Air Max Plus purple - view 5" class="product__thumb" /> </div> <div class="product__image-wrapper"> <span class="product__badge"> <i class="star">★</i> Highly Rated </span> <img src="./assets/img/color 11.jpg" alt="Nike Air Max Plus purple main preview" class="product__image" /> </div> </div> <div class="product__details"> <h2 id="product-title" class="product__title">Nike Air Max Plus</h2> <p class="product__price">$280.00</p> <div class="product__colors" role="group" aria-label="Select color"> <button class="product__color" aria-label="White color"> <img src="./assets/img/white 1.jpg" alt="White version" /> </button> <button class="product__color" aria-label="Black color"> <img src="./assets/img/black 6.jpg" alt="Black version" /> </button> <button class="product__color is-active" aria-label="Purple color"> <img src="./assets/img/color 11.jpg" alt="Purple version" /> </button> </div> <div class="product__sizes" role="group" aria-label="Select size"> <p class="product__label">Select Size:</p> <button class="product__size">UK 5.5</button> <button class="product__size">UK 6 (EU 39)</button> <button class="product__size is-active">UK 6 (EU 40)</button> <button class="product__size">UK 6.5</button> <button class="product__size">UK 7</button> <button class="product__size">UK 7.5</button> </div> <button type="button" class="product__btn">Add To Bag</button> <p class="product__desc"> Let your attitude have the edge in your Nike Air Max Plus, a Tuned Air experience that offers premium stability and unbelievable cushioning. </p> </div> </section>
 
-      <div>
-        <p class="copyright">&copy;  2025 Nike, Inc. All rights reserved</p>
+<!----Contact Form -->
 
-        <a href="#">Terms of Use</a>
-        <a href="#">Privacy & Cookie Policy</a>
-        <a href="#">Privacy & Cookie Setting</a>
+      <section class="contact">
+  <h4 class="contact__title">Need Help?</h4>
+
+  <form class="contact__form" id="contactForm">
+    <div class="contact__row">
+      <div class="contact__field">
+        <label for="user-name">Name</label>
+        <input type="text" id="user-name" placeholder="Enter name" required />
       </div>
-    </footer>
+      <div class="contact__field">
+        <label for="user-number">Number</label>
+        <input type="text" id="user-number" placeholder="Enter number" required />
+      </div>
+    </div>
+
+    <div class="contact__field">
+      <label for="user-email">Email</label>
+      <input type="email" id="user-email" placeholder="Enter email" required />
+    </div>
+
+    <div class="contact__field">
+      <label for="user-message">Message</label>
+      <textarea id="user-message" placeholder="Enter message" required></textarea>
+    </div>
+
+    <button type="submit" class="contact__btn">Submit</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer__top">
+    <ul class="footer__list">
+      <p class="footer__title">Resources</p>
+      <li><a href="#">Find a Store</a></li>
+      <li><a href="#">Nike Journal</a></li>
+      <li><a href="#">Become a Member</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">Promo Codes</a></li>
+    </ul>
+
+    <ul class="footer__list">
+      <p class="footer__title">Help</p>
+      <li><a href="#">Get Help</a></li>
+      <li><a href="#">Order Status</a></li>
+      <li><a href="#">Shipping and Delivery</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Payment Options</a></li>
+    </ul>
+
+    <ul class="footer__list">
+      <p class="footer__title">Company</p>
+      <li><a href="#">About Stellar Soft</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Investors</a></li>
+      <li><a href="#">Sustainability</a></li>
+    </ul>
+
+    <ul class="footer__list">
+      <p class="footer__title">Menu</p>
+      <li><a href="#">New & Featured</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Kids</a></li>
+    </ul>
+  </div>
+
+  <div class="footer__bottom">
+    <p class="copyright">© 2025 Stellar Soft. All rights reserved</p>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy & Cookie Policy</a>
+    <a href="#">Privacy & Cookie Setting</a>
+  </div>
+</footer>
+
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>

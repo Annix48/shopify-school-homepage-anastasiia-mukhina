@@ -1,0 +1,234 @@
+.product {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  padding: 32px;
+  font-family: $font-family;
+
+  &__gallery {
+    display: flex;
+    gap: 24px; 
+  }
+
+  &__thumbnails {
+    display: flex;
+    flex-direction: column;
+    width: 88px;
+    height: 536px;
+    gap: 16px;
+
+    .product__thumb {
+      width: 88px;
+      height: 88px;
+      border: 1px solid $color-stroke;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 2px;
+      background: $color-white;
+      object-fit: cover;
+
+      &.is-active {
+        border: 2px solid $color-black;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 536px;
+    height: 536px;
+    border-radius: 8px;
+    border: 1px solid $color-stroke;
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .product__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: $color-white;
+      border: 1px solid $color-stroke;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 4px 8px;
+      line-height: 1.2;
+      color: $color-black;
+    }
+
+    .product__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-black;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-black;
+  }
+
+  // COLORS
+  &__colors {
+    display: flex;
+    gap: 16px;
+
+    .product__color {
+      width: 88px;
+      height: 88px;
+      border: 1px solid $color-stroke;
+      border-radius: 8px;
+      cursor: pointer;
+      background: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 88px;
+        height: 88px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      &.is-active {
+        border: 2px solid $color-black;
+      }
+    }
+  }
+
+  // SIZES
+  &__sizes {
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+
+    .product__label {
+        grid-column: 1 / -1;
+      font-size: 14px;
+      line-height: 143%;
+      font-weight: 400;
+      color: #111;
+       margin-bottom: 4px;
+    }
+
+    .sizes-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .product__size {
+       width: 100%;
+    height: 52px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 143%;
+    font-weight: 400;
+      border: 1px solid $color-stroke;
+      border-radius: 8px;
+      background: $color-white;
+      color: $color-black;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: $color-black;
+      }
+
+      &.is-active {
+        border: 2px solid $color-black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // BUTTON
+  &__btn {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    padding: 16px 32px;
+    background: $color-black;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: darken($color-black, 10%);
+    }
+  }
+
+  // DESCRIPTION
+  &__desc {
+    width: 100%;
+    font-size: 14px;
+    line-height: 143%;
+    font-weight: 400;
+    color: $color-gray;
+  }
+
+  // ====== ADAPTIVE
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    &__gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn,
+    &__desc {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 16px;
+
+    &__thumbnails {
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+    }
+
+    &__image-wrapper {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+
+    &__imgage {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+    &__btn,
+    &__desc {
+      width: 100%;
+    }
+  }
+}

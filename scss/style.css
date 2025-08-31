@@ -327,6 +327,49 @@ body, p {
   text-align: left;
 }
 
+.footer {
+  background: #fff;
+  padding: 40px 0px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 32px;
+}
+@media (max-width: 767px) {
+  .footer__top {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.footer__list {
+  flex: 1;
+}
+.footer__list .footer__title {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.footer__list li {
+  margin-bottom: 8px;
+}
+.footer__list li a {
+  font-size: 14px;
+  color: #737373;
+  transition: color 0.2s;
+}
+.footer__list li a:hover {
+  color: #000;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color: #737373;
+  border-top: 1px solid #ebebeb;
+  padding-top: 20px;
+}
+
 .featured-collection {
   padding: 40px 20px;
 }
@@ -386,6 +429,211 @@ body, p {
 }
 .featured-collection .featured-slider .swiper-pagination-bullet-active {
   background-color: #000;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  padding: 32px;
+  font-family: "Poppins", sans-serif;
+}
+.product__gallery {
+  display: flex;
+  gap: 24px;
+}
+.product__thumbnails {
+  display: flex;
+  flex-direction: column;
+  width: 88px;
+  height: 536px;
+  gap: 16px;
+}
+.product__thumbnails .product__thumb {
+  width: 88px;
+  height: 88px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 2px;
+  background: #fff;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product__thumbnails .product__thumb.is-active {
+  border: 2px solid #000;
+}
+.product__image-wrapper {
+  position: relative;
+  width: 536px;
+  height: 536px;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__image-wrapper .product__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  line-height: 1.2;
+  color: #000;
+}
+.product__image-wrapper .product__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+.product__price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.product__colors {
+  display: flex;
+  gap: 16px;
+}
+.product__colors .product__color {
+  width: 88px;
+  height: 88px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__colors .product__color img {
+  width: 88px;
+  height: 88px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product__colors .product__color.is-active {
+  border: 2px solid #000;
+}
+.product__sizes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+.product__sizes .product__label {
+  grid-column: 1/-1;
+  font-size: 14px;
+  line-height: 143%;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 4px;
+}
+.product__sizes .sizes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.product__sizes .product__size {
+  width: 100%;
+  height: 52px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 143%;
+  font-weight: 400;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.product__sizes .product__size:hover {
+  border-color: #000;
+}
+.product__sizes .product__size.is-active {
+  border: 2px solid #000;
+  font-weight: 600;
+}
+.product__btn {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px 32px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.product__btn:hover {
+  background: black;
+}
+.product__desc {
+  width: 100%;
+  font-size: 14px;
+  line-height: 143%;
+  font-weight: 400;
+  color: #737373;
+}
+@media (max-width: 1279px) {
+  .product {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .product__gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product__btn, .product__desc {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .product {
+    padding: 16px;
+  }
+  .product__thumbnails {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  .product__image-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .product__imgage {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .product__btn, .product__desc {
+    width: 100%;
+  }
 }
 
 .popup {
@@ -497,4 +745,67 @@ body, p {
 }
 .popup__form button:hover {
   background: #333;
+}
+
+.contact {
+  background: #f5f5f5;
+  padding: 80px 60px;
+  text-align: center;
+}
+.contact__title {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.contact__form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact__row {
+  display: flex;
+  gap: 24px;
+}
+.contact__row .contact__field {
+  flex: 1;
+}
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.contact__field label {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.contact__field input,
+.contact__field textarea {
+  padding: 12px 16px;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+}
+.contact__field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.contact__btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 121px;
+  height: 56px;
+  margin: 0 auto;
+}
+.contact__btn:hover {
+  background-color: #cacacb;
+  color: #000;
 }/*# sourceMappingURL=style.css.map */

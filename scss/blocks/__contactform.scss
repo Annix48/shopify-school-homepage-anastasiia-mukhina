@@ -1,0 +1,74 @@
+.contact {
+  background: #f5f5f5;
+  padding: 80px 60px;
+  text-align: center;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 24px;
+
+    .contact__field {
+      flex: 1;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    label {
+      font-size: 14px;
+      color: $color-black;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      padding: 12px 16px;
+      border: 1px solid $color-stroke;
+      border-radius: 6px;
+      font-family: $font-family;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+  }
+
+  &__btn {
+    background: $color-black;
+    color: $color-white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    cursor: pointer;
+    font-weight: 500;
+
+    width: 121px;
+    height: 56px;
+    // text-align: center;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: $color-gray-light; 
+      color: $color-black;
+    }
+  }
+}

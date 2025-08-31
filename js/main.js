@@ -55,3 +55,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//Form submission
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+
+    alert("Thank you!");
+
+    form.reset(); 
+  });
+});

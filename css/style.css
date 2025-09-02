@@ -392,11 +392,12 @@ p {
   width: 20px;
   height: 20px;
   display: inline-block;
-  background: url("/assets/icons/plus-circle.svg") no-repeat center center;
+  background: url("../assets/icons/plus-circle.svg") no-repeat center center;
   background-size: contain;
+  transition: transform 0.3s;
 }
 .faq-spoiler .faq-container .spoiler-block__item .spoiler-block__title.active span {
-  background: url("/assets/icons/minus.svg") no-repeat center center;
+  background: url("../assets/icons/minus.svg") no-repeat center center;
   background-size: contain;
 }
 .faq-spoiler .faq-container .spoiler-block__item .spoiler-block__content {

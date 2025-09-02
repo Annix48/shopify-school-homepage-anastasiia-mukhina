@@ -118,21 +118,21 @@
     }
 
     .hero-content {
-     inset: 0;
-    transform: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
+      inset: 0;
+      transform: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
 
       h1 {
         font-size: 30px;
-      line-height: 36px;
-      width: 100%;         
-      max-width: 335px;    
-      margin: 0 auto 12px;
+        line-height: 36px;
+        width: 100%;
+        max-width: 335px;
+        margin: 0 auto 12px;
       }
 
       p {
@@ -172,14 +172,12 @@
 
     .swiper-pagination {
       bottom: 16px;
-      
     }
   }
 }
 
 @media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
-
-.hero-section {
-  height: 500px;
-}
+  .hero-section {
+    height: 500px;
+  }
 }

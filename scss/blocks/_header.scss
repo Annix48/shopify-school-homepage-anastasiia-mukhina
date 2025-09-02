@@ -4,7 +4,6 @@
   border-bottom: 1px solid $color-stroke;
   // position: static !important;
 
-
   &__burger {
     display: none;
   }
@@ -12,7 +11,7 @@
   &__container {
     max-width: 1440px;
     margin: 0 60px;
-   
+
     height: 84px;
 
     display: flex;
@@ -85,7 +84,7 @@
   }
 }
 
-@media (max-width:$bp-mobile) {
+@media (max-width: $bp-mobile) {
   .header {
     &__container {
       padding: 0 16px;

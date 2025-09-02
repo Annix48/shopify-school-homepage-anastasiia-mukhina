@@ -21,7 +21,6 @@ const featuredSwiper = new Swiper(".featured-slider", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-   
   },
   breakpoints: {
     0: {

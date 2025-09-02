@@ -25,7 +25,6 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("popupClosed", "true");
 });
 
-
 //FAQ
 document.addEventListener("DOMContentLoaded", () => {
   const spollers = document.querySelectorAll("[data-spollers]");
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const isOpen = btn.classList.contains("active");
 
         if (spollerContainer.hasAttribute("data-one-spoller")) {
-          
           items.forEach((otherBtn) => {
             otherBtn.classList.remove("active");
             otherBtn.nextElementSibling.style.maxHeight = null;
@@ -64,19 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     alert("Thank you!");
 
-    form.reset(); 
+    form.reset();
   });
 });
-
 
 //Featured Products Slider
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   const VARIANTS = {
     white: {
       price: 260,
@@ -120,18 +116,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  
   const thumbsContainer = document.getElementById("thumbs");
   const mainImage = document.querySelector(".product__image");
   const priceEl = document.querySelector(".product__price");
   const colorButtons = document.querySelectorAll(".product__color");
   const sizeContainer = document.querySelector(".product__sizes");
 
-  
   let currentColor = "purple";
   let currentSize = VARIANTS[currentColor].sizes[0];
   let currentImageIndex = 0;
-
 
   function renderThumbnails(images) {
     thumbsContainer.innerHTML = "";
@@ -158,12 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
     mainImage.alt = `${currentColor} product image`;
   }
 
-  
   function updatePrice() {
     priceEl.textContent = `$${VARIANTS[currentColor].price.toFixed(2)}`;
   }
 
-  
   function renderSizes(sizes) {
     const label = sizeContainer.querySelector(".product__label");
     sizeContainer.innerHTML = "";
@@ -187,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
- 
   colorButtons.forEach((btn, idx) => {
     const keys = Object.keys(VARIANTS);
     const colorKey = keys[idx];
@@ -199,11 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
       currentImageIndex = 0;
       currentSize = VARIANTS[currentColor].sizes[0];
 
-      
       colorButtons.forEach((b) => b.classList.remove("is-active"));
       btn.classList.add("is-active");
 
-      
       renderThumbnails(VARIANTS[currentColor].images);
       updateMainImage();
       updatePrice();
@@ -211,13 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   renderThumbnails(VARIANTS[currentColor].images);
   updateMainImage();
   updatePrice();
   renderSizes(VARIANTS[currentColor].sizes);
 });
-
 
 //======Mobile version accardeon=========
 

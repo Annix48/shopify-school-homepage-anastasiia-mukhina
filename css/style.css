@@ -51,14 +51,16 @@ h2 {
   }
 }
 
-body, p {
+body,
+p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
 @media (max-width: 767px) {
-  body, p {
+  body,
+  p {
     font-size: 14px;
     line-height: 20px;
   }

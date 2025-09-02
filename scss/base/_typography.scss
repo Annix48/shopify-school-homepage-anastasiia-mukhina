@@ -1,6 +1,5 @@
-
-@import '../base/variables'; 
-@import '../utils/mixins'; 
+@import "../base/variables";
+@import "../utils/mixins";
 
 h1 {
   font-family: $font-family;
@@ -26,7 +25,8 @@ h2 {
   }
 }
 
-body, p {
+body,
+p {
   font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
@@ -37,7 +37,6 @@ body, p {
     line-height: 20px;
   }
 }
-
 
 .body-large {
   font-size: 16px;

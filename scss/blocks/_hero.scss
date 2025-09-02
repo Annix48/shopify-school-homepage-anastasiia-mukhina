@@ -1,108 +1,185 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 750px; 
   overflow: hidden;
   font-family: $font-family;
 
-  .swiper-wrapper {
-    display: flex;
+  .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 100%;
   }
 
   .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
-    height: 750px;
+    height: 100%;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; 
+      object-fit: contain;
       display: block;
+      background: $color-gray;
     }
 
     .hero-content {
       position: absolute;
-      top: 227px;
+      top: 50%;
       left: 60px;
+      transform: translateY(-50%);
       width: 648px;
-      height: 296px;
       text-align: left;
       color: $color-white;
       z-index: 10;
+    }
 
-      h1 {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 48px;
-        margin: 0 0 16px 0;
+    h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 48px;
+      margin-bottom: 16px;
+    }
 
-        @media (max-width: $bp-mobile) {
-          font-size: 30px;
-          line-height: 36px;
-        }
-      }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
 
-      p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin: 0 0 24px 0;
+    button {
+      width: 220px;
+      height: 56px;
+      padding: 16px 32px;
+      border-radius: 8px;
+      border: none;
+      background: $color-white;
+      color: $color-black;
+      font-family: $font-family;
+      font-size: 16px;
+      line-height: 150%;
+      cursor: pointer;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      transition: 0.2s;
 
-        @media (max-width: $bp-mobile) {
-          font-size: 14px;
-          line-height: 20px;
-        }
-      }
-
-      button {
-        padding: 12px 24px;
-        font-size: 16px;
-        font-weight: 500;
-        background-color: $color-white;
-        color: $color-black;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.2s;
-
-        &:hover {
-          opacity: 0.9;
-        }
+      &:hover {
+        opacity: 0.9;
+        background: $color-gray;
       }
     }
   }
 
   .swiper-pagination {
     position: absolute;
-    bottom: 16px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-     z-index: 20;
-     display: flex;
-     justify-content: center;
-     width: auto;
-  }
+    display: flex;
+    gap: 8px;
+    z-index: 50;
 
-  @media (max-width: $bp-mobile) {
-    height: 400px;
-    .hero-content {
-      top: 50px;
-      left: 20px;
-      width: calc(100% - 40px);
-      height: auto;
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 6px;
+      background-color: $color-gray;
+      border-radius: 999px;
+      opacity: 1;
+      transition: background-color 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $color-white;
     }
   }
 }
 
-.swiper-pagination-bullet {
-  width: 20x;
-  height: 6px;
-  background-color: $color-gray; 
-  opacity: 1;
- border-radius: 999px;
+/* MOBILE */
+@media (max-width: $bp-mobile) {
+  .hero-section {
+    height: 600px;
+
+    .swiper,
+    .swiper-wrapper,
+    .swiper-slide {
+      height: 100%;
+    }
+
+    .swiper-slide img {
+      object-fit: cover;
+    }
+
+    .hero-content {
+     inset: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+      h1 {
+        font-size: 30px;
+      line-height: 36px;
+      width: 100%;         
+      max-width: 335px;    
+      margin: 0 auto 12px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 16px;
+      }
+
+      button {
+        display: inline-block;
+        width: 100%;
+        max-width: 280px;
+        height: 56px;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 8px;
+        background: $color-white;
+        color: $color-black;
+        font-family: $font-family;
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 600;
+        cursor: pointer;
+        text-shadow: none;
+        transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+
+        &:hover {
+          background: $color-gray;
+          color: $color-white;
+        }
+
+        &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 16px;
+      
+    }
+  }
 }
 
-.swiper-pagination-bullet-active {
-  background-color: $color-white; 
+@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
+
+.hero-section {
+  height: 500px;
+}
 }

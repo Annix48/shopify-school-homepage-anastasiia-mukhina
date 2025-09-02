@@ -1,15 +1,15 @@
 .faq-spoiler {
   width: 100%;
-  max-width: 1280px;
   margin: 0 auto;
   padding: 60px 20px;
   text-align: center;
   font-family: $font-family;
+  background: #f5f5f5;
 
   h2 {
-    font-size: 48px;
-    line-height: 48px;
-    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: 400;
     margin-bottom: 16px;
 
     @media (max-width: $bp-mobile) {
@@ -30,53 +30,68 @@
     }
   }
 
-  .spoiler-block__item {
-    width: 100%;
+  .faq-container {
     max-width: 800px;
-    margin: 0 auto 16px auto;
-    border-bottom: 1px solid $color-stroke;
+    border-radius: 8px;
 
-    .spoiler-block__title {
+    margin: 0 auto;
+    background: #fff;
+    padding: 0;
+    text-align: left;
+
+    .spoiler-block__item {
       width: 100%;
-      text-align: left;
-      padding: 16px;
-      font-size: 16px;
-      font-weight: 500;
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: $color-black;
+      max-width: 800px;
+      margin: 0 auto 16px auto;
+      border-bottom: 1px solid $color-stroke;
 
-      span {
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        background: url('./assets/icons/plus.svg') no-repeat center center;
-        background-size: contain;
-        transition: transform 0.3s;
+      &:last-child {
+        border-bottom: none;
       }
 
-      &.active span {
-        transform: rotate(45deg);
+      .spoiler-block__title {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 500;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-black;
+
+        span {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          background: url("/assets/icons/plus-circle.svg") no-repeat center
+            center;
+          background-size: contain;
+          // transition: transform 0.3s;
+        }
+
+        &.active span {
+          background: url("/assets/icons/minus.svg") no-repeat center center;
+          background-size: contain;
+        }
       }
-    }
 
-    .spoiler-block__content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
+      .spoiler-block__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
 
-      .spoiler-block__info {
-        padding: 16px 0;
+        .spoiler-block__info {
+          padding: 0 16px 0;
 
-        .spoiler-block__text {
-          font-size: 16px;
-          line-height: 24px;
-          color: $color-gray;
-          text-align: left;
+          .spoiler-block__text {
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-gray;
+            text-align: left;
+          }
         }
       }
     }

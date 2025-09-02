@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Annix48/test-shopify#readme",
   "devDependencies": {
     "sass": "^1.91.0"
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
   }
 }

@@ -2,12 +2,17 @@
   background-color: $color-white;
   font-family: $font-family;
   border-bottom: 1px solid $color-stroke;
+  // position: static !important;
+
+
+  &__burger {
+    display: none;
+  }
 
   &__container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-left: 60px;
-    padding-right: 30px;
+    max-width: 1440px;
+    margin: 0 60px;
+   
     height: 84px;
 
     display: flex;
@@ -27,37 +32,20 @@
   }
 
   &__nav {
-    // flex: 1;
+    flex: 1;
     display: flex;
     justify-content: center;
-    // gap: 32px;
 
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      // width: 353px;
-      // height: 24px;
-
-      font-size: 16px;
-      font-weight: 500;
-      color: $color-black;
-    }
     .header__menu {
       display: flex;
       gap: 32px;
 
       li a {
-       font-size: 16px;
-    font-weight: 500;
-    color: $color-black;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 24px; // оставляем высоту
-    text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-black;
+        line-height: 150%;
+        text-align: center;
 
         &:hover,
         &:focus {
@@ -70,6 +58,7 @@
   &__cart {
     display: flex;
     align-items: center;
+    margin-left: auto;
 
     img {
       width: 24px;
@@ -79,15 +68,42 @@
   }
 }
 
-@include respond-to(mobile) {
+@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max) {
   .header {
     &__container {
-      padding-left: 20px;
-      padding-right: 20px;
-      height: 64px;
+      padding: 0 40px;
+      height: 72px;
+    }
+
+    &__nav .header__menu {
+      gap: 24px;
+    }
+
+    &__burger {
+      display: none;
+    }
+  }
+}
+
+@media (max-width:$bp-mobile) {
+  .header {
+    &__container {
+      padding: 0 16px;
+      height: 56px;
+    }
+
+    &__burger {
+      display: block;
+      border: none;
+      background-color: $color-white;
     }
 
     &__nav {
+      display: none;
+    }
+
+    &__logo {
+      margin: 0 auto;
       display: none;
     }
 

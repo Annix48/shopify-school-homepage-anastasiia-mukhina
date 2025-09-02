@@ -1,13 +1,16 @@
 .featured-collection {
-  padding: 40px 20px;
+  padding: 80px 0 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   h2 {
     font-family: $font-family;
     font-size: 30px;
     line-height: 36px;
-    font-weight: 700;
-    margin-bottom: 24px;
+    font-weight: 400;
+    margin-bottom: 32px;
     color: $color-black;
+    text-align: center;
 
     @media (max-width: $bp-mobile) {
       font-size: 24px;
@@ -17,53 +20,49 @@
 
   .featured-slider {
     position: relative;
+    overflow: visible;
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
 
     .swiper-slide {
+      height: auto;
       display: flex;
       justify-content: center;
+    }
 
-      .product-card {
-        background-color: $color-white;
-        text-align: center;
-        padding: 16px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: $color-white;
+      border-radius: 12px;
+      height: 100%;
+      overflow: hidden;
 
-        img {
-          width: 100%;
-          height: auto;
-          margin-bottom: 12px;
-        }
-
-        h3 {
-          font-size: 16px;
-          line-height: 20px;
-          font-weight: 500;
-          margin-bottom: 8px;
-        }
-
-        p {
-          font-size: 14px;
-          line-height: 20px;
-          color: $color-gray;
-        }
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 12px;
+        object-fit: cover;
+        display: block;
       }
-    }
+      
+      h3 {
+        font-family: $font-family;
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 400;
+        margin-bottom: 8px;
+      }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: $color-black;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .swiper-pagination-bullet {
-      background-color: $color-gray;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: $color-black;
+      p {
+        font-size: 16px;
+        line-height: 150%;
+        color: $color-gray;
+        font-weight: 400;
+      }
     }
   }
 }

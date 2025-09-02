@@ -1,27 +1,59 @@
-
 .footer {
   background: $color-white;
-  padding: 40px 0px;
+  max-width: 1440px;
+  padding: 60px 60px 24px;
 
   &__top {
+    max-width: 1280px;
+    margin-bottom: 48px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
     gap: 32px;
 
-     @include respond-to(mobile) {
+    @media (max-width: $bp-mobile) {
       flex-direction: column;
-      gap: 24px;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__col {
+    flex: unset;
+    min-width: 160px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__title {
+    font-weight: 400;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 150%;
+
+    @media (max-width: $bp-mobile) {
+      width: 100%;
+      padding-right: 32px;
+      position: relative;
+    }
+
+    &::after {
+      content: "›";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform 0.3s;
+    }
+
+    &.is-open::after {
+      transform: translateY(-50%) rotate(-90deg);
     }
   }
 
   &__list {
-    flex: 1;
-
-    .footer__title {
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     li {
       margin-bottom: 8px;
@@ -36,14 +68,59 @@
         }
       }
     }
+
+    @include respond-to(mobile) {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+      &.is-open {
+        max-height: 500px;
+        margin-top: 8px;
+      }
+    }
   }
 
   &__bottom {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
     color: $color-gray;
-    border-top: 1px solid $color-stroke;
-    padding-top: 20px;
+    max-width: 872px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+
+    line-height: 143%;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      text-align: center;
+    }
+
+    .copyright {
+      color: $color-gray;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+     
+    }
+
+    & .footer__legal {
+      display: flex;
+      gap: 16px;
+
+      a {
+        color: $color-gray;
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
   }
 }

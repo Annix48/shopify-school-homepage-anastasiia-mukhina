@@ -123,7 +123,6 @@ p {
 .header__cart {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 .header__cart img {
   width: 24px;
@@ -260,40 +259,53 @@ p {
 /* MOBILE */
 @media (max-width: 767px) {
   .hero-section {
+    position: relative;
+    width: 375px;
     height: 600px;
   }
   .hero-section .swiper,
   .hero-section .swiper-wrapper,
   .hero-section .swiper-slide {
-    height: 100%;
+    width: 375px;
+    height: 600px;
+  }
+  .hero-section .swiper-slide {
+    position: relative;
   }
   .hero-section .swiper-slide img {
+    width: 375px;
+    height: 600px;
     object-fit: cover;
   }
   .hero-section .hero-content {
+    position: absolute;
     inset: 0;
-    transform: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    color: #fff;
   }
   .hero-section .hero-content h1 {
     font-size: 30px;
-    line-height: 36px;
-    width: 100%;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
     max-width: 335px;
-    margin: 0 auto 12px;
+    margin: 0 0 12px;
   }
   .hero-section .hero-content p {
-    font-size: 14px;
-    line-height: 20px;
+    max-width: 320px;
     margin: 0 0 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    display: flex;
   }
   .hero-section .hero-content button {
-    display: inline-block;
     width: 100%;
     max-width: 280px;
     height: 56px;
@@ -302,20 +314,14 @@ p {
     border-radius: 8px;
     background: #fff;
     color: #000;
-    font-family: "Poppins", sans-serif;
     font-size: 16px;
-    line-height: 150%;
     font-weight: 600;
     cursor: pointer;
-    text-shadow: none;
-    transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+    transition: 0.2s;
   }
   .hero-section .hero-content button:hover {
     background: #737373;
     color: #fff;
-  }
-  .hero-section .hero-content button:active {
-    opacity: 0.9;
   }
   .hero-section .swiper-pagination {
     bottom: 16px;
@@ -812,6 +818,22 @@ p {
     aspect-ratio: 1/1;
     order: 1;
   }
+  .product__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .product__title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
+  }
+  .product__price {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #737373;
+  }
   .product .product__image {
     object-fit: contain;
     padding: 8px;
@@ -936,7 +958,7 @@ p {
 
 @media (max-width: 767px) {
   .popup {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-start;
     padding-top: calc(env(safe-area-inset-top, 0px) + 16px);

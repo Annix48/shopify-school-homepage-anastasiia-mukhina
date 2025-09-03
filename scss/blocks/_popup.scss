@@ -125,7 +125,8 @@
 
 @media (max-width: $bp-mobile) {
   .popup {
-    display: flex;
+    // display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-start;
     padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
@@ -153,6 +154,7 @@
     }
 
     &__close {
+      
       top: 12px;
       right: 12px;
       width: 32px;

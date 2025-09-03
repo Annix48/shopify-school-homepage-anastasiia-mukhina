@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoHeight: true,
+    autoHeight: true,
     slidesPerView: 1,
   });
 });

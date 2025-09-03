@@ -11,9 +11,7 @@
   &__container {
     max-width: 1440px;
     margin: 0 60px;
-
     height: 84px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,12 +55,14 @@
   &__cart {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    // margin-left: auto;
+
 
     img {
       width: 24px;
       height: 24px;
       display: block;
+      
     }
   }
 }

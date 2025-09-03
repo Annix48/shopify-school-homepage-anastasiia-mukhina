@@ -15,9 +15,10 @@
     display: flex;
     border-radius: 16px;
     overflow: hidden;
-    width: 871px; // 519 + 352
+    width: 871px;
     height: 536px;
     background: #fff;
+    position: relative;
   }
 
   &__text {
@@ -124,23 +125,47 @@
 
 @media (max-width: $bp-mobile) {
   .popup {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+
     &__content {
       flex-direction: column;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
+      width: 359px;
+      height: 488px;
+      padding: 60px 24px;
+      border-radius: 16px;
+      position: relative;
+      box-sizing: border-box;
+      max-width: calc(100vw - 24px);
     }
 
     &__text {
-      width: 100%;
+      width: auto;
       height: auto;
-      padding: 32px 20px;
+      padding: 0;
       border-radius: 0;
     }
 
     &__image {
       display: none;
+    }
+
+    &__close {
+      top: 12px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+    }
+
+    &__text h2 {
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    &__text p {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }

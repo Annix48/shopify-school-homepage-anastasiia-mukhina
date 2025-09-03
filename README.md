@@ -6,7 +6,7 @@ Built with **vanilla JavaScript, HTML5, and SCSS**.
 ---
 
 ## 🚀 Demo
-👉 [Live Demo on GitHub Pages](https://annix48.github.io/shopify-test/)
+👉 [Live Demo on GitHub Pages](https://annix48.github.io/shopify-school-homepage-anastasiia-mukhina/)
 
 ---
 
